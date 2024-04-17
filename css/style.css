@@ -25,14 +25,14 @@ img {
 }
 
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 
 .box {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 /* ---------HEADER------------ */
@@ -214,37 +214,30 @@ img {
 
 .improv-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
     }
 
 .improv-item {
-    width: calc((100% - 3 * 24px) / 4);
+    width: auto;
 }
 
-
 .improv-box-svg {
-    background: #f4f4fd;
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-    padding: 24px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 112px;
-    margin-bottom: 8px;
+    display: none;
 }
 
 .improv-item-heading {
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .improv-desc {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -255,6 +248,11 @@ img {
 /* our team */
 .team {
     background: #f4f4fd;
+}
+
+.container.cover {
+    padding-right: 28px;
+    padding-left: 28px;
 }
 
 .team-heading {
@@ -270,7 +268,8 @@ img {
 
 .team-list{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .team-item {
@@ -355,7 +354,7 @@ img {
 .portgolio-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    gap: 48px;
 }
 
 .portfolio-item{
@@ -419,21 +418,21 @@ img {
 /* footer */
 footer {
     background-color: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
+    justify-content: center;
     align-items: baseline
 }
 
-.footer-text{
-    margin-right: 120px;
-}
-
 .footer-logo {
-    display: inline-block;
+    display: block;
+    text-align: center;
     margin-bottom: 16px;
 }
 
@@ -449,9 +448,6 @@ footer {
     max-width: 264px;
 }
 
-.footer-socials {
-    margin-right: 80px;
-}
 
 .footer-socials-heading {
     font-weight: 500;
@@ -460,6 +456,7 @@ footer {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-socials-list {
@@ -493,6 +490,7 @@ footer {
 }
 
 .footer-subscribe {
+    
 }
 .footer-subscribe-text {
     font-weight: 500;
@@ -501,14 +499,16 @@ footer {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-form {
     display: flex;
-    gap: 24px;  
+    flex-wrap: wrap;
+    gap: 16px;
 }
 .footer-email {
-    width: 264px;
+    width: 288px;
     height: 40px;
     border: 1px solid #fff;
     border-radius: 4px;
@@ -548,6 +548,7 @@ footer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -576,11 +577,11 @@ footer {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-}
+} */
 
 .modal {
     width: 408px;
@@ -733,6 +734,7 @@ footer {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: flex;
     gap: 8px;
     align-items: center;
 }
@@ -788,4 +790,156 @@ footer {
 
 .modal-btn-send:hover {
     background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    /* 4 points for improvement */
+    .improv-list {
+        gap: 72px 24px;
+    }
+
+    .improv-item {
+        width: calc((100% - 24px) / 2); 
+    }
+
+    .improv-item-heading {
+        text-align: left;
+    }
+
+       /* Our team */
+    .team > .container {
+        width: 608px;
+    } 
+
+    .team-list {
+        gap: 64px 24px;
+    }
+
+    /* Our Portfolio */
+    .portgolio-list {
+        gap: 72px 24px;
+    }
+
+    /* footer */
+
+    .footer-container{
+        gap: 72px 24px;
+        justify-content: start;
+    }
+
+    .footer > .container {
+        width: 528px;
+    
+    } 
+
+    .footer-logo {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .footer-socials-heading {
+        text-align: left;
+    }
+
+    .footer-subscribe-text {
+        text-align: left;
+    }
+
+    .footer-form {
+        gap: 24px;
+    }
+
+    .footer-email {
+        width: 264px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .box{
+        padding: 120px 0;
+    }
+
+    /* 4 points for improvement */
+    .improv-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .improv-item {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .improv-box-svg {
+        background: #f4f4fd;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        padding: 24px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        margin-bottom: 8px;
+    }
+
+    .improv-item-heading{
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .improv-desc{
+        font-weight: 400;
+    }
+
+    /* Our team */
+    .team-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .team > .container {
+        width: 1184px;
+    }
+
+    /* Our Portfolio */
+    .portgolio-list {
+        gap: 48px 24px;
+    }
+
+    /* footer */
+    footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .footer > .container {
+        width: 1158px;
+    } 
+
+    .footer-container {
+        flex-wrap: nowrap;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .footer-text{
+        margin-right: 120px;
+    }
+
+    .footer-socials {
+        margin-right: 80px;
+    }
+
+    .footer-form {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
 }
