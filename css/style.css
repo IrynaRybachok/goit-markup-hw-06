@@ -994,14 +994,13 @@ footer {
 
     /* footer */
 
-    .footer-container{
+    .footer-container {
         gap: 72px 24px;
-        justify-content: start;
+        justify-content: flex-start;
     }
 
     .footer > .container {
-        width: 528px;
-        margin-left: 92px;
+        width: 585px;
     } 
 
     .footer-logo {
