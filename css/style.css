@@ -39,7 +39,6 @@ img {
 
 .header {
     border-bottom: 1px solid #e7e9fc
-    max-width: 320px;
     margin: 0 auto;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
@@ -863,10 +862,6 @@ footer {
         display: none;
     }
 
-    .header {
-        max-width: 768px;
-    }
-
     .nav {
         display: flex;
         align-items: center;
@@ -874,9 +869,6 @@ footer {
 
     .logo.header-logo {
         padding: 24px 0;
-    }
-
-    .header-logo .logo-part {
         margin-right: 120px;
     }
 
@@ -1051,11 +1043,7 @@ footer {
 
     /* HEADER */
 
-    .header {
-        max-width: 1440px; 
-    }
-
-    .header-logo .logo-part {
+    .logo.header-logo {
         margin-right: 76px; 
     }
 
